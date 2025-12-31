@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷海的个人博客</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 700px; /* 方框稍宽 */
+      width: 120%;
+    }
+
+    .box {
+      border: 2px solid #ffe066;
+      border-radius: 10px;
+      padding: 50px; /* 内容稍大 */
+      margin: 15px auto; /* 左右间距短一点 */
+      background: rgba(10, 0, 30, 0.7);
+      box-shadow: 0 0 20px rgba(166, 155, 254, 0.5);
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #a29bfe;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .name { font-size: 2em; font-weight: bold; margin: 10px 0; color: white; }
+    .slogan { font-size: 1.2em; margin: 10px 0 20px; color: #ccc; }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #ffe066;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+      background: rgba(255, 224, 102, 0.1);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <!-- 头像只展示，不可上传 -->
+      {% if avatar_url %}
+        <img src="{{ avatar_url }}" class="avatar" alt="头像">
+      {% else %}
+        <img src="https://via.placeholder.com/150" class="avatar" alt="默认头像">
+      {% endif %}
+
+      <!-- 名字和标语 -->
+      <div class="name">雷海</div>
+      <div class="slogan">仰望星空，脚踏实地</div>
+
+      <!-- 导航链接 -->
+      <div class="nav-links">
+        <a href="{{ url_for('about_me') }}">关于我</a>
+        <a href="{{ url_for('research') }}">研究内容</a>
+        <a href="{{ url_for('gallery') }}">图库</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
