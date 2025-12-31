@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>关于我 - 雷海的博客</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Microsoft YaHei", sans-serif;
+      background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .overlay {
+      background: rgba(10, 0, 30, 0.7);
+      min-height: 100vh;
+      padding: 40px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffd6ff;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .card h2 {
+      color: #ffe066;
+      margin-bottom: 15px;
+    }
+    .card p, .card ul {
+      color: #eee;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #ffe066;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .social-links {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .social-links a {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(255, 224, 102, 0.2);
+      border: 1px solid rgba(255,224,102,0.4);
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      background: rgba(255,224,102,0.3);
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 3px 10px rgba(255,224,102,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container">
+      <h1>关于我</h1>
+
+      <div class="card">
+        <h2>个人简介</h2>
+        <p>大家好，我是雷海，一名热爱探索的研究者与创作者。  
+        我喜欢仰望星空，也喜欢脚踏实地去完成每一个目标。  
+        这个博客会记录我的研究、学习心得，以及生活感悟。</p>
+      </div>
+
+      <div class="card">
+        <h2>兴趣爱好</h2>
+        <ul>
+          <li>天文摄影与星空观测</li>
+          <li>科普写作与博客记录</li>
+          <li>科技探索与新技术尝试</li>
+          <li>游戏与电子产品研究</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>联系方式</h2>
+        <p>
+          📞 电话：17585249330<br>
+          📧 邮箱：<a href="mailto:leihai5514@gmail.com">leihai5514@gmail.com</a><br>
+          💬 微信：SeaThunder0421<br>
+          🎬 抖音：69408629
+        </p>
+        <div class="social-links" style="justify-content: center;">
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Bilibili</a>
+        </div>
+      </div>
+
+      <p><a href="{{ url_for('home') }}">← 返回主页</a></p>
+    </div>
+  </div>
+</body>
+</html>
