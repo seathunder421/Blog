@@ -1,114 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>研究内容 - 雷海的博客</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>研究内容 | 雷海 SeaThunder</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Microsoft YaHei", sans-serif;
-      background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-    .overlay {
-      background: rgba(10, 0, 30, 0.75);
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 30px;
-      color: #ffd6ff;
-      letter-spacing: 2px;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 30px;
-      border-radius: 15px;
-      margin: 25px 0;
-      text-align: left;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    }
-    .card h2 {
-      color: #ffe066;
-      margin-bottom: 15px;
-      font-size: 1.6em;
-      border-left: 4px solid #ffe066;
-      padding-left: 10px;
-    }
-    .card p, .card ul {
-      color: #eee;
-      line-height: 1.8;
-      font-size: 1.1em;
-    }
-    .card ul {
-      padding-left: 25px;
-      list-style: disc;
-    }
-    a {
-      color: #ffe066;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .btn-link {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 6px 14px;
-      border: 1px solid #ffe066;
-      border-radius: 8px;
-      color: #ffe066;
-      font-size: 0.95em;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-    }
-    .btn-link:hover {
-      background: #ffe066;
-      color: #222;
-    }
+    :root{--bg:#050816;--card:rgba(8,13,33,.82);--gold:#ffe066;--cyan:#7dd3fc;--purple:#c4b5fd;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.16)}
+    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 75% 20%,rgba(14,165,233,.28),transparent 32%),linear-gradient(rgba(2,6,23,.68),rgba(2,6,23,.9)),url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1950&q=80') center/cover fixed} a{color:inherit;text-decoration:none}.page{width:min(1080px,calc(100% - 36px));margin:auto;padding:34px 0 54px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(2,6,23,.52);backdrop-filter:blur(14px);margin-bottom:32px}.brand{font-weight:900;color:var(--gold);letter-spacing:.08em}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:8px 13px;color:var(--muted);border-radius:999px}.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.1)}.hero{padding:38px;border:1px solid var(--line);border-radius:30px;background:var(--card);box-shadow:0 24px 80px rgba(0,0,0,.32);margin-bottom:20px}.eyebrow{color:var(--cyan);font-weight:900;margin-bottom:12px}h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1;letter-spacing:-.05em;margin-bottom:18px}.gradient{background:linear-gradient(90deg,var(--gold),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);line-height:1.9;font-size:1.08rem;max-width:900px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{padding:26px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.07);backdrop-filter:blur(12px);transition:.22s}.card:hover{transform:translateY(-3px);background:rgba(255,255,255,.1)}.card.full{grid-column:1/-1}.card h2{color:var(--gold);margin-bottom:14px;font-size:1.35rem}.card p,.card li{color:var(--muted);line-height:1.85;font-size:1.02rem}.card ul{padding-left:20px}.timeline{display:grid;gap:14px}.item{padding:18px;border-radius:18px;background:rgba(2,6,23,.35);border:1px solid var(--line)}.item strong{display:block;color:#e0f2fe;margin-bottom:6px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{padding:18px;border-radius:20px;background:rgba(255,224,102,.1);border:1px solid rgba(255,224,102,.24)}.metric strong{display:block;color:var(--gold);font-size:1.65rem}.metric span{color:var(--muted)}.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.btn{padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--gold);font-weight:900}.back{display:inline-flex;margin-top:22px;color:var(--gold);font-weight:900}@media(max-width:820px){.grid,.metrics{grid-template-columns:1fr}.hero{padding:28px}.topbar{border-radius:24px;align-items:flex-start;flex-direction:column}}
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <h1>研究内容</h1>
-      <div class="card">
-        <h2>研究方向</h2>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="../index.html">SEATHUNDER · BLOG</a>
+      <nav class="nav"><a href="../index.html">首页</a><a href="./about_me.html">关于我</a><a class="active" href="./research.html">研究内容</a><a href="./gallery.html">图库</a></nav>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Research</div>
+      <h1>脉冲星、偏振与<br><span class="gradient">辐射几何结构。</span></h1>
+      <p class="lead">我的研究围绕脉冲星射电辐射、偏振观测和几何模型展开。通过 FAST、MeerKAT、Parkes 等观测数据，结合 RVM 拟合与统计分析，尝试理解脉冲星磁轴、视线、辐射束与演化之间的关系。</p>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>核心方向</h2>
         <ul>
-          <li>脉冲星辐射几何结构与偏振模型（RVM 拟合、磁倾角演化）</li>
-          <li>脉冲星射电辐射的演化规律及频率依赖性</li>
-          <li>多望远镜观测数据联合分析（FAST、MeerKAT、Parkes）</li>
-          <li>脉冲星旋转能损失机制与磁场演化</li>
+          <li>脉冲星辐射几何结构与偏振模型</li>
+          <li>RVM 拟合、磁倾角与冲击角分布</li>
+          <li>射电辐射随频率变化的演化规律</li>
+          <li>多望远镜观测数据联合分析与样本构建</li>
         </ul>
-      </div>
-      <div class="card">
-        <h2>近期成果</h2>
-        <p>
-          基于 MeerKAT 和 FAST 的偏振观测，完成了 <strong>400+ 脉冲星</strong> 的几何参数拟合，  
-          系统分析了磁倾角与冲击角分布，构建了目前最大规模的 RVM 样本。
-        </p>
+      </article>
+      <article class="card">
+        <h2>研究方法</h2>
         <ul>
-          <li>发表文章：<em>Emission Beam Geometry of Radio Pulsars</em> （准备中）</li>
-          <li>脉冲星参数 <a class="btn-link" href="{{ url_for('parameters') }}">查看 🔗</a></li>
-          <li>设备访问记录 <a class="btn-link" href="{{ url_for('record') }}">查看 🖥️</a></li>
+          <li>使用 Python 进行数据清洗、拟合和可视化</li>
+          <li>对偏振位置角曲线进行模型约束</li>
+          <li>比较不同频段、不同望远镜观测结果</li>
+          <li>构建可复现的数据处理流程和参数表</li>
         </ul>
-      </div>
-      <p><a href="{{ url_for('home') }}">← 返回主页</a></p>
-    </div>
-  </div>
+      </article>
+      <article class="card full">
+        <h2>阶段性成果</h2>
+        <div class="metrics"><div class="metric"><strong>400+</strong><span>脉冲星几何参数拟合样本</span></div><div class="metric"><strong>RVM</strong><span>偏振位置角模型分析</span></div><div class="metric"><strong>Multi</strong><span>FAST / MeerKAT / Parkes 联合数据</span></div></div>
+        <p style="margin-top:16px">目前已围绕大样本脉冲星偏振观测完成几何参数整理与初步统计，后续会继续完善样本质量控制、图表展示、文章结果整理和公开页面。</p>
+      </article>
+      <article class="card">
+        <h2>近期任务</h2>
+        <div class="timeline">
+          <div class="item"><strong>样本整理</strong><span>统一参数命名、误差范围、观测频段和数据来源。</span></div>
+          <div class="item"><strong>图表优化</strong><span>完善磁倾角分布、冲击角分布和频率依赖性展示。</span></div>
+          <div class="item"><strong>论文写作</strong><span>推进 Emission Beam Geometry of Radio Pulsars 相关内容。</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <h2>代码与项目</h2>
+        <p>相关代码会逐步整理到 GitHub，用于记录数据处理脚本、拟合流程、图表生成和科研工具。</p>
+        <div class="btns"><a class="btn" href="https://github.com/seathunder421" target="_blank" rel="noopener">GitHub 主页</a><a class="btn" href="./about_me.html">联系交流</a><a class="btn" href="./gallery.html">查看图库</a></div>
+      </article>
+    </section>
+    <a class="back" href="../index.html">← 返回主页</a>
+  </main>
 </body>
 </html>
