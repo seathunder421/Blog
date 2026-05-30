@@ -3,112 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>雷海的个人博客</title>
+  <meta name="description" content="雷海 SeaThunder 的个人博客：脉冲星、天文数据分析、科研记录、代码实验与生活观察。" />
+  <title>雷海 SeaThunder | 个人博客</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: "Microsoft YaHei", sans-serif;
-      background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      position: relative;
-      overflow-x: hidden; /* 防止横向溢出 */
-    }
-
-    .container {
-      text-align: center;
-      max-width: 700px;
-      width: 100%;          /* 由 120% 改为 100%，避免溢出 */
-      margin: 0 auto;
-    }
-
-    .box {
-      border: 2px solid #ffe066;
-      border-radius: 10px;
-      padding: 50px;
-      margin: 15px auto;
-      background: rgba(10, 0, 30, 0.7);
-      box-shadow: 0 0 20px rgba(166, 155, 254, 0.5);
-    }
-
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #a29bfe;
-      margin: 0 auto 20px;
-      display: block;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    }
-
-    .name {
-      font-size: 2em;
-      font-weight: bold;
-      margin: 10px 0;
-      color: #fff;
-    }
-
-    .slogan {
-      font-size: 1.2em;
-      margin: 10px 0 20px;
-      color: #ccc;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin: 25px 0 0;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: #ffe066;
-      text-decoration: none;
-      font-size: 1.2em;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 224, 102, 0.35);
-    }
-
-    .nav-links a:hover {
-      background: rgba(255, 224, 102, 0.12);
-      transform: translateY(-2px);
-    }
-
-    /* 手机端 padding 稍微收一点 */
-    @media (max-width: 480px) {
-      .box { padding: 32px 22px; }
-      .nav-links a { font-size: 1.05em; }
-    }
+    :root{--bg:#050816;--card:rgba(8,13,33,.78);--gold:#ffe066;--cyan:#7dd3fc;--purple:#c4b5fd;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.16)}
+    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 15%,rgba(124,58,237,.34),transparent 32%),radial-gradient(circle at 85% 12%,rgba(14,165,233,.28),transparent 30%),linear-gradient(rgba(2,6,23,.58),rgba(2,6,23,.85)),url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') center/cover fixed;overflow-x:hidden} body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff .8px,transparent .9px),radial-gradient(#fff .6px,transparent .7px);background-size:120px 120px,70px 70px;background-position:0 0,35px 45px;opacity:.16;animation:drift 38s linear infinite}@keyframes drift{to{transform:translateY(-120px)}} a{color:inherit;text-decoration:none}.page{width:min(1120px,calc(100% - 36px));margin:auto;padding:34px 0 54px;position:relative;z-index:1}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(2,6,23,.48);backdrop-filter:blur(14px);box-shadow:0 18px 60px rgba(0,0,0,.22);margin-bottom:42px}.brand{font-weight:900;letter-spacing:.08em;color:var(--gold)}.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.nav a{padding:8px 13px;color:var(--muted);border-radius:999px;transition:.22s}.nav a:hover{color:#fff;background:rgba(255,255,255,.1);transform:translateY(-1px)}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}.panel{border:1px solid var(--line);border-radius:30px;background:var(--card);backdrop-filter:blur(18px);box-shadow:0 24px 80px rgba(0,0,0,.34)}.intro{padding:44px;min-height:560px;display:flex;flex-direction:column;justify-content:center}.tag{width:fit-content;color:var(--cyan);border:1px solid rgba(125,211,252,.38);background:rgba(14,165,233,.12);padding:8px 13px;border-radius:999px;font-size:.92rem;margin-bottom:22px}h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:.96;letter-spacing:-.06em;margin-bottom:22px}.gradient{background:linear-gradient(90deg,var(--gold),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:clamp(1rem,2vw,1.18rem);line-height:1.9;max-width:650px;margin-bottom:28px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);font-weight:800;transition:.22s}.btn.primary{color:#111827;background:linear-gradient(135deg,var(--gold),#fde68a);border-color:transparent}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(0,0,0,.24)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.07)}.stat strong{display:block;font-size:1.55rem;color:var(--gold)}.stat span{color:var(--muted);font-size:.92rem}.profile{padding:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.profile:after{content:"PULSAR · DATA · SKY";position:absolute;right:-60px;bottom:30px;transform:rotate(-90deg);font-size:.82rem;letter-spacing:.42em;color:rgba(255,255,255,.18)}.avatar-wrap{display:grid;place-items:center;padding:28px 10px 20px}.avatar{width:min(245px,68vw);aspect-ratio:1;border-radius:50%;object-fit:cover;border:5px solid rgba(255,224,102,.72);box-shadow:0 0 0 16px rgba(255,224,102,.07),0 26px 80px rgba(0,0,0,.5)}.profile-card{border-radius:24px;padding:24px;background:rgba(10,18,44,.92);border:1px solid var(--line)}.profile-card h2{font-size:2rem;margin-bottom:8px}.profile-card p{color:var(--muted);line-height:1.8}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chip{padding:8px 11px;border-radius:999px;background:rgba(196,181,253,.13);color:#ddd6fe;border:1px solid rgba(196,181,253,.24);font-size:.9rem}.section-title{margin:42px 0 18px;font-size:1.45rem;color:var(--gold)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mini-card{padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.07);transition:.22s}.mini-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}.mini-card h3{margin-bottom:10px;color:#e0f2fe}.mini-card p{color:var(--muted);line-height:1.75}footer{margin-top:34px;text-align:center;color:rgba(226,232,240,.78);font-size:.95rem}@media(max-width:860px){.hero,.cards{grid-template-columns:1fr}.intro{min-height:auto;padding:32px 24px}.topbar{align-items:flex-start;border-radius:24px;flex-direction:column}.nav{justify-content:flex-start}.stats{grid-template-columns:1fr}}
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="box">
-      <!-- GitHub Pages：直接写静态路径 -->
-      <img src="./static/avatar/avatar.jpg" class="avatar" alt="头像" />
-
-      <div class="name">雷海</div>
-      <div class="slogan">仰望星空，脚踏实地</div>
-
-      <!-- GitHub Pages：用静态页面链接（你需要创建这些页面） -->
-      <div class="nav-links">
-      <a href="./templates/about_me.html">关于我</a>
-      <a href="./templates/research.html">研究内容</a>
-      <a href="./templates/gallery.html">图库</a>
-      </div>
-    </div>
-  </div>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="./index.html">SEATHUNDER · BLOG</a>
+      <nav class="nav" aria-label="主导航">
+        <a href="./templates/about_me.html">关于我</a><a href="./templates/research.html">研究内容</a><a href="./templates/gallery.html">图库</a><a href="mailto:leihai5514@gmail.com">联系</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <article class="panel intro">
+        <div class="tag">Astrophysics · Pulsars · Data Analysis</div>
+        <h1>雷海<br><span class="gradient">SeaThunder</span></h1>
+        <p class="lead">这里是我的个人宇宙：记录脉冲星研究、天文数据分析、代码实验、科研路上的思考，也收藏生活里让我停下脚步的星光。仰望星空，脚踏实地；把复杂的数据变成可以讲述的故事。</p>
+        <div class="actions"><a class="btn primary" href="./templates/research.html">查看研究方向 →</a><a class="btn" href="./templates/about_me.html">了解我</a><a class="btn" href="https://github.com/seathunder421" target="_blank" rel="noopener">GitHub</a></div>
+        <div class="stats"><div class="stat"><strong>400+</strong><span>脉冲星 RVM 样本</span></div><div class="stat"><strong>FAST</strong><span>偏振与射电观测</span></div><div class="stat"><strong>MeerKAT</strong><span>多望远镜联合分析</span></div></div>
+      </article>
+      <aside class="panel profile">
+        <div class="avatar-wrap"><img src="./static/avatar/avatar.jpg" class="avatar" alt="雷海的头像" /></div>
+        <div class="profile-card"><h2>你好，我是雷海。</h2><p>我关注脉冲星辐射几何、偏振模型与观测数据处理。这个博客不仅是作品集，也是一份持续更新的科研笔记。</p><div class="chips"><span class="chip">脉冲星</span><span class="chip">RVM 拟合</span><span class="chip">Python</span><span class="chip">天文摄影</span><span class="chip">科研记录</span></div></div>
+      </aside>
+    </section>
+    <h2 class="section-title">博客里有什么</h2>
+    <section class="cards">
+      <a class="mini-card" href="./templates/about_me.html"><h3>个人档案</h3><p>更完整地介绍我的背景、兴趣、联系方式与正在做的事情。</p></a>
+      <a class="mini-card" href="./templates/research.html"><h3>研究内容</h3><p>整理脉冲星偏振、辐射几何、RVM 拟合和多望远镜数据分析。</p></a>
+      <a class="mini-card" href="./templates/gallery.html"><h3>星空图库</h3><p>用图片保存科研之外的瞬间：天空、望远镜、旅途与灵感。</p></a>
+    </section>
+    <footer>© 2026 雷海 SeaThunder · Built with GitHub Pages</footer>
+  </main>
 </body>
 </html>
