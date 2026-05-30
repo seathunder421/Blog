@@ -1,120 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>关于我 - 雷海的博客</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于我 | 雷海 SeaThunder</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Microsoft YaHei", sans-serif;
-      background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-    .overlay {
-      background: rgba(10, 0, 30, 0.7);
-      min-height: 100vh;
-      padding: 40px;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #ffd6ff;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 30px;
-      border-radius: 15px;
-      margin: 20px 0;
-      text-align: left;
-    }
-    .card h2 {
-      color: #ffe066;
-      margin-bottom: 15px;
-    }
-    .card p, .card ul {
-      color: #eee;
-      line-height: 1.8;
-      font-size: 1.1em;
-    }
-    .card ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #ffe066;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .social-links {
-      display: flex;
-      justify-content: flex-start;
-      gap: 15px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
-    .social-links a {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: rgba(255, 224, 102, 0.2);
-      border: 1px solid rgba(255,224,102,0.4);
-      transition: all 0.3s ease;
-    }
-    .social-links a:hover {
-      background: rgba(255,224,102,0.3);
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 3px 10px rgba(255,224,102,0.5);
-    }
+    :root{--bg:#050816;--card:rgba(8,13,33,.82);--gold:#ffe066;--cyan:#7dd3fc;--purple:#c4b5fd;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.16)}
+    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 20% 15%,rgba(124,58,237,.32),transparent 32%),linear-gradient(rgba(2,6,23,.68),rgba(2,6,23,.9)),url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') center/cover fixed} a{color:inherit;text-decoration:none}.page{width:min(1040px,calc(100% - 36px));margin:auto;padding:34px 0 54px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(2,6,23,.52);backdrop-filter:blur(14px);margin-bottom:32px}.brand{font-weight:900;color:var(--gold);letter-spacing:.08em}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:8px 13px;color:var(--muted);border-radius:999px}.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.1)}.hero{padding:38px;border:1px solid var(--line);border-radius:30px;background:var(--card);box-shadow:0 24px 80px rgba(0,0,0,.32);margin-bottom:20px}.eyebrow{color:var(--cyan);margin-bottom:12px;font-weight:800}h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1;letter-spacing:-.05em;margin-bottom:18px}.gradient{background:linear-gradient(90deg,var(--gold),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:1.08rem;line-height:1.9;max-width:860px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{padding:26px;border-radius:24px;border:1px solid var(--line);background:rgba(255,255,255,.07);backdrop-filter:blur(12px)}.card.full{grid-column:1/-1}.card h2{color:var(--gold);margin-bottom:14px;font-size:1.35rem}.card p,.card li{color:var(--muted);line-height:1.85;font-size:1.02rem}.card ul{padding-left:20px}.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(125,211,252,.28);background:rgba(14,165,233,.12);color:#dbeafe}.contact{display:grid;gap:10px}.contact a,.link-btn{color:var(--gold);font-weight:800}.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.social a{padding:10px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.08);transition:.22s}.social a:hover{transform:translateY(-2px);background:rgba(255,224,102,.13)}.back{display:inline-flex;margin-top:22px;color:var(--gold);font-weight:900}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{padding:28px}.topbar{border-radius:24px;align-items:flex-start;flex-direction:column}}
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <h1>关于我</h1>
-
-      <div class="card">
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="../index.html">SEATHUNDER · BLOG</a>
+      <nav class="nav"><a href="../index.html">首页</a><a class="active" href="./about_me.html">关于我</a><a href="./research.html">研究内容</a><a href="./gallery.html">图库</a></nav>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">About Me</div>
+      <h1>把星空、数据和代码<br><span class="gradient">连成自己的轨道。</span></h1>
+      <p class="lead">大家好，我是雷海（SeaThunder）。我热爱天文学与数据分析，尤其关注脉冲星偏振、辐射几何结构和多望远镜观测数据处理。这个博客是我的个人主页，也是科研笔记、项目展示和生活记录的入口。</p>
+    </section>
+    <section class="grid">
+      <article class="card">
         <h2>个人简介</h2>
-        <p>大家好，我是雷海，一名热爱探索的研究者与创作者。  
-        我喜欢仰望星空，也喜欢脚踏实地去完成每一个目标。  
-        这个博客会记录我的研究、学习心得，以及生活感悟。</p>
-      </div>
-
-      <div class="card">
+        <p>我喜欢从观测数据中寻找规律，也喜欢把复杂的问题拆解成可以复现、可以解释、可以分享的过程。科研之外，我会记录摄影、旅行、技术尝试和一些阶段性思考。</p>
+      </article>
+      <article class="card">
+        <h2>我正在关注</h2>
+        <ul>
+          <li>脉冲星辐射几何与 RVM 拟合</li>
+          <li>FAST、MeerKAT、Parkes 等望远镜数据分析</li>
+          <li>Python 科学计算、可视化和自动化流程</li>
+          <li>科研写作、博客整理与知识沉淀</li>
+        </ul>
+      </article>
+      <article class="card full">
+        <h2>关键词</h2>
+        <div class="chips"><span class="chip">Pulsar</span><span class="chip">Polarization</span><span class="chip">RVM</span><span class="chip">FAST</span><span class="chip">MeerKAT</span><span class="chip">Python</span><span class="chip">Astronomy</span><span class="chip">Data Analysis</span></div>
+      </article>
+      <article class="card">
         <h2>兴趣爱好</h2>
         <ul>
           <li>天文摄影与星空观测</li>
           <li>科普写作与博客记录</li>
-          <li>科技探索与新技术尝试</li>
-          <li>游戏与电子产品研究</li>
+          <li>新工具、新技术和电子产品探索</li>
+          <li>把科研过程做成更清晰的图表与页面</li>
         </ul>
-      </div>
-
-      <div class="card">
+      </article>
+      <article class="card">
         <h2>联系方式</h2>
-        <p>
-          📞 电话：17585249330<br>
-          📧 邮箱：<a href="mailto:leihai5514@gmail.com">leihai5514@gmail.com</a><br>
-          💬 微信：SeaThunder0421<br>
-          🎬 抖音：69408629
-        </p>
-        <div class="social-links" style="justify-content: center;">
-          <a href="#" target="_blank">GitHub</a>
-          <a href="#" target="_blank">LinkedIn</a>
-          <a href="#" target="_blank">Bilibili</a>
+        <div class="contact">
+          <p>邮箱：<a href="mailto:leihai5514@gmail.com">leihai5514@gmail.com</a></p>
+          <p>微信：SeaThunder0421</p>
+          <p>GitHub：<a href="https://github.com/seathunder421" target="_blank" rel="noopener">seathunder421</a></p>
+          <p>抖音：69408629</p>
         </div>
-      </div>
-
-      <p><a href="{{ url_for('home') }}">← 返回主页</a></p>
-    </div>
-  </div>
+        <div class="social"><a href="https://github.com/seathunder421" target="_blank" rel="noopener">GitHub</a><a href="mailto:leihai5514@gmail.com">Email</a><a href="./research.html">Research</a></div>
+      </article>
+    </section>
+    <a class="back" href="../index.html">← 返回主页</a>
+  </main>
 </body>
 </html>
