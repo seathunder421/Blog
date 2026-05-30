@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head><title>图片库</title></head>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图库 | 雷海 SeaThunder</title>
+  <style>
+    :root{--bg:#050816;--card:rgba(8,13,33,.82);--gold:#ffe066;--cyan:#7dd3fc;--purple:#c4b5fd;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.16)}
+    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 20% 25%,rgba(124,58,237,.3),transparent 32%),radial-gradient(circle at 80% 15%,rgba(14,165,233,.24),transparent 30%),linear-gradient(rgba(2,6,23,.7),rgba(2,6,23,.92)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1950&q=80') center/cover fixed} a{color:inherit;text-decoration:none}.page{width:min(1080px,calc(100% - 36px));margin:auto;padding:34px 0 54px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(2,6,23,.52);backdrop-filter:blur(14px);margin-bottom:32px}.brand{font-weight:900;color:var(--gold);letter-spacing:.08em}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:8px 13px;color:var(--muted);border-radius:999px}.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.1)}.hero{padding:38px;border:1px solid var(--line);border-radius:30px;background:var(--card);box-shadow:0 24px 80px rgba(0,0,0,.32);margin-bottom:20px}.eyebrow{color:var(--cyan);font-weight:900;margin-bottom:12px}h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1;letter-spacing:-.05em;margin-bottom:18px}.gradient{background:linear-gradient(90deg,var(--gold),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);line-height:1.9;font-size:1.08rem;max-width:850px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.photo{min-height:280px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.07);position:relative;box-shadow:0 20px 60px rgba(0,0,0,.24)}.photo img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02);transition:.35s}.photo:hover img{transform:scale(1.06)}.caption{position:absolute;left:0;right:0;bottom:0;padding:18px;background:linear-gradient(transparent,rgba(2,6,23,.88));}.caption strong{display:block;color:#fff;margin-bottom:5px}.caption span{color:var(--muted);font-size:.92rem;line-height:1.55}.note{margin-top:18px;padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.07);color:var(--muted);line-height:1.85}.note strong{color:var(--gold)}.back{display:inline-flex;margin-top:22px;color:var(--gold);font-weight:900}@media(max-width:920px){.gallery{grid-template-columns:1fr 1fr}.topbar{border-radius:24px;align-items:flex-start;flex-direction:column}}@media(max-width:620px){.gallery{grid-template-columns:1fr}.hero{padding:28px}}
+  </style>
+</head>
 <body>
-    <h2>上传的图片</h2>
-    {% for img in images %}
-        <div style="display:inline-block; margin:10px;">
-            <img src="{{ url_for('static', filename='uploads/' + img) }}" width="200"><br>
-            {{ img }}
-        </div>
-    {% endfor %}
-    <br><br>
-    <a href="{{ url_for('upload') }}">返回上传</a>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="../index.html">SEATHUNDER · BLOG</a>
+      <nav class="nav"><a href="../index.html">首页</a><a href="./about_me.html">关于我</a><a href="./research.html">研究内容</a><a class="active" href="./gallery.html">图库</a></nav>
+    </header>
+    <section class="hero">
+      <div class="eyebrow">Gallery</div>
+      <h1>收藏星光、旅途与<br><span class="gradient">灵感瞬间。</span></h1>
+      <p class="lead">这里用于展示科研之外的视觉记录：星空、望远镜、自然风景、生活片段与未来想补充的观测照片。当前页面已改为纯静态版本，可以直接在 GitHub Pages 中打开。</p>
+    </section>
+    <section class="gallery">
+      <article class="photo"><img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=900&q=80" alt="星空"><div class="caption"><strong>星空</strong><span>仰望星空，是开始每一次探索的理由。</span></div></article>
+      <article class="photo"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80" alt="深空"><div class="caption"><strong>深空</strong><span>在暗处寻找微弱信号，在数据里寻找结构。</span></div></article>
+      <article class="photo"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="旅途"><div class="caption"><strong>旅途</strong><span>生活里的风景，也会成为科研之外的能量。</span></div></article>
+      <article class="photo"><img src="https://images.unsplash.com/photo-1504333638930-c8787321eee0?auto=format&fit=crop&w=900&q=80" alt="夜空"><div class="caption"><strong>夜空观测</strong><span>每一次抬头，都是和宇宙重新建立联系。</span></div></article>
+      <article class="photo"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="海边"><div class="caption"><strong>SeaThunder</strong><span>海与雷，是昵称里保留的自由感和力量感。</span></div></article>
+      <article class="photo"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="山与星"><div class="caption"><strong>山与星</strong><span>把遥远的目标拆成脚下的一步一步。</span></div></article>
+    </section>
+    <section class="note"><strong>后续可继续完善：</strong>你可以把自己的真实照片放到仓库的 <code>static/uploads/</code> 或 <code>static/gallery/</code> 目录，然后把本页图片链接替换成相对路径，例如 <code>../static/gallery/your-photo.jpg</code>。</section>
+    <a class="back" href="../index.html">← 返回主页</a>
+  </main>
 </body>
 </html>
