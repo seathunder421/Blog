@@ -4,40 +4,383 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="雷海 SeaThunder 的个人博客：脉冲星、天文数据分析、科研记录、代码实验与生活观察。" />
-  <title>雷海 SeaThunder | 个人博客</title>
+  <title>雷海 SeaThunder | Blog</title>
   <style>
-    :root{--bg:#050816;--card:rgba(8,13,33,.78);--gold:#ffe066;--cyan:#7dd3fc;--purple:#c4b5fd;--text:#f8fafc;--muted:#cbd5e1;--line:rgba(255,255,255,.16)}
-    *{box-sizing:border-box;margin:0;padding:0} body{min-height:100vh;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 15%,rgba(124,58,237,.34),transparent 32%),radial-gradient(circle at 85% 12%,rgba(14,165,233,.28),transparent 30%),linear-gradient(rgba(2,6,23,.58),rgba(2,6,23,.85)),url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1950&q=80') center/cover fixed;overflow-x:hidden} body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff .8px,transparent .9px),radial-gradient(#fff .6px,transparent .7px);background-size:120px 120px,70px 70px;background-position:0 0,35px 45px;opacity:.16;animation:drift 38s linear infinite}@keyframes drift{to{transform:translateY(-120px)}} a{color:inherit;text-decoration:none}.page{width:min(1120px,calc(100% - 36px));margin:auto;padding:34px 0 54px;position:relative;z-index:1}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(2,6,23,.48);backdrop-filter:blur(14px);box-shadow:0 18px 60px rgba(0,0,0,.22);margin-bottom:42px}.brand{font-weight:900;letter-spacing:.08em;color:var(--gold)}.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.nav a{padding:8px 13px;color:var(--muted);border-radius:999px;transition:.22s}.nav a:hover{color:#fff;background:rgba(255,255,255,.1);transform:translateY(-1px)}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}.panel{border:1px solid var(--line);border-radius:30px;background:var(--card);backdrop-filter:blur(18px);box-shadow:0 24px 80px rgba(0,0,0,.34)}.intro{padding:44px;min-height:560px;display:flex;flex-direction:column;justify-content:center}.tag{width:fit-content;color:var(--cyan);border:1px solid rgba(125,211,252,.38);background:rgba(14,165,233,.12);padding:8px 13px;border-radius:999px;font-size:.92rem;margin-bottom:22px}h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:.96;letter-spacing:-.06em;margin-bottom:22px}.gradient{background:linear-gradient(90deg,var(--gold),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:clamp(1rem,2vw,1.18rem);line-height:1.9;max-width:650px;margin-bottom:28px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);font-weight:800;transition:.22s}.btn.primary{color:#111827;background:linear-gradient(135deg,var(--gold),#fde68a);border-color:transparent}.btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(0,0,0,.24)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.07)}.stat strong{display:block;font-size:1.55rem;color:var(--gold)}.stat span{color:var(--muted);font-size:.92rem}.profile{padding:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.profile:after{content:"PULSAR · DATA · SKY";position:absolute;right:-60px;bottom:30px;transform:rotate(-90deg);font-size:.82rem;letter-spacing:.42em;color:rgba(255,255,255,.18)}.avatar-wrap{display:grid;place-items:center;padding:28px 10px 20px}.avatar{width:min(245px,68vw);aspect-ratio:1;border-radius:50%;object-fit:cover;border:5px solid rgba(255,224,102,.72);box-shadow:0 0 0 16px rgba(255,224,102,.07),0 26px 80px rgba(0,0,0,.5)}.profile-card{border-radius:24px;padding:24px;background:rgba(10,18,44,.92);border:1px solid var(--line)}.profile-card h2{font-size:2rem;margin-bottom:8px}.profile-card p{color:var(--muted);line-height:1.8}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chip{padding:8px 11px;border-radius:999px;background:rgba(196,181,253,.13);color:#ddd6fe;border:1px solid rgba(196,181,253,.24);font-size:.9rem}.section-title{margin:42px 0 18px;font-size:1.45rem;color:var(--gold)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mini-card{padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.07);transition:.22s}.mini-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}.mini-card h3{margin-bottom:10px;color:#e0f2fe}.mini-card p{color:var(--muted);line-height:1.75}footer{margin-top:34px;text-align:center;color:rgba(226,232,240,.78);font-size:.95rem}@media(max-width:860px){.hero,.cards{grid-template-columns:1fr}.intro{min-height:auto;padding:32px 24px}.topbar{align-items:flex-start;border-radius:24px;flex-direction:column}.nav{justify-content:flex-start}.stats{grid-template-columns:1fr}}
+    :root {
+      --text: #f7f7f2;
+      --muted: rgba(247, 247, 242, 0.68);
+      --line: rgba(247, 247, 242, 0.2);
+      --surface: rgba(7, 10, 18, 0.42);
+      --accent: #d9b56d;
+      --ink: #090b12;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      color: var(--text);
+      background: #070a12;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(180deg, rgba(4, 7, 13, 0.18), rgba(4, 7, 13, 0.62) 56%, rgba(4, 7, 13, 0.92)),
+        url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=2400&q=85") center / cover no-repeat;
+      transform: scale(1.02);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.32), transparent 35%, rgba(0, 0, 0, 0.18)),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.12), transparent 34%);
+      pointer-events: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(247, 247, 242, 0.12);
+      background: rgba(7, 10, 18, 0.22);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .links a {
+      transition: color 180ms ease, opacity 180ms ease;
+    }
+
+    .links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 132px 0 64px;
+    }
+
+    .hero-content {
+      width: min(820px, 100%);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(4rem, 13vw, 10.5rem);
+      line-height: 0.9;
+      font-weight: 760;
+      letter-spacing: 0;
+      max-width: 920px;
+    }
+
+    .lead {
+      width: min(620px, 100%);
+      margin-top: 28px;
+      color: rgba(247, 247, 242, 0.76);
+      font-size: clamp(1rem, 1.8vw, 1.18rem);
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(247, 247, 242, 0.06);
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .button.primary {
+      color: var(--ink);
+      background: var(--text);
+      border-color: var(--text);
+      font-weight: 700;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: rgba(247, 247, 242, 0.12);
+      border-color: rgba(247, 247, 242, 0.44);
+    }
+
+    .button.primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .content {
+      padding: 0 0 72px;
+    }
+
+    .intro-strip {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: start;
+      padding: 54px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, rgba(7, 10, 18, 0.32), rgba(7, 10, 18, 0.08));
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .intro-strip h2 {
+      margin-top: 14px;
+      font-size: clamp(2rem, 5vw, 4.4rem);
+      line-height: 1.02;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+
+    .intro-copy {
+      color: rgba(247, 247, 242, 0.72);
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    .index-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      margin-top: 46px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .index-item {
+      min-height: 190px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(7, 10, 18, 0.5);
+      transition: background 180ms ease;
+    }
+
+    .index-item:hover {
+      background: rgba(247, 247, 242, 0.08);
+    }
+
+    .index-item span {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .index-item h3 {
+      margin-top: 18px;
+      font-size: 1.25rem;
+      font-weight: 680;
+    }
+
+    .index-item p {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.72;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 32px 0 0;
+      color: rgba(247, 247, 242, 0.54);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav-inner {
+        min-height: auto;
+        padding: 20px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 14px 18px;
+      }
+
+      .hero {
+        min-height: 82vh;
+        padding-top: 150px;
+      }
+
+      .intro-strip,
+      .index-list {
+        grid-template-columns: 1fr;
+      }
+
+      .index-item {
+        min-height: 150px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .hero {
+        min-height: 80vh;
+        padding-bottom: 46px;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 21vw, 5.8rem);
+      }
+
+      .lead {
+        font-size: 0.98rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <main class="page">
-    <header class="topbar">
-      <a class="brand" href="./index.html">SEATHUNDER · BLOG</a>
-      <nav class="nav" aria-label="主导航">
-        <a href="./templates/about_me.html">关于我</a><a href="./templates/research.html">研究内容</a><a href="./templates/gallery.html">图库</a><a href="mailto:leihai5514@gmail.com">联系</a>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="./index.html">SeaThunder</a>
+      <nav class="links" aria-label="主导航">
+        <a href="./templates/about_me.html">关于</a>
+        <a href="./templates/research.html">研究</a>
+        <a href="./templates/pulsar_parameters.html">参数</a>
+        <a href="./templates/record.html">记录</a>
+        <a href="./templates/gallery.html">图库</a>
       </nav>
-    </header>
-    <section class="hero">
-      <article class="panel intro">
-        <div class="tag">Astrophysics · Pulsars · Data Analysis</div>
-        <h1>雷海<br><span class="gradient">SeaThunder</span></h1>
-        <p class="lead">这里是我的个人宇宙：记录脉冲星研究、天文数据分析、代码实验、科研路上的思考，也收藏生活里让我停下脚步的星光。仰望星空，脚踏实地；把复杂的数据变成可以讲述的故事。</p>
-        <div class="actions"><a class="btn primary" href="./templates/research.html">查看研究方向 →</a><a class="btn" href="./templates/about_me.html">了解我</a><a class="btn" href="https://github.com/seathunder421" target="_blank" rel="noopener">GitHub</a></div>
-        <div class="stats"><div class="stat"><strong>400+</strong><span>脉冲星 RVM 样本</span></div><div class="stat"><strong>FAST</strong><span>偏振与射电观测</span></div><div class="stat"><strong>MeerKAT</strong><span>多望远镜联合分析</span></div></div>
-      </article>
-      <aside class="panel profile">
-        <div class="avatar-wrap"><img src="./static/avatar/avatar.jpg" class="avatar" alt="雷海的头像" /></div>
-        <div class="profile-card"><h2>你好，我是雷海。</h2><p>我关注脉冲星辐射几何、偏振模型与观测数据处理。这个博客不仅是作品集，也是一份持续更新的科研笔记。</p><div class="chips"><span class="chip">脉冲星</span><span class="chip">RVM 拟合</span><span class="chip">Python</span><span class="chip">天文摄影</span><span class="chip">科研记录</span></div></div>
-      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-content">
+        <p class="eyebrow">Astrophysics · Pulsars · Data</p>
+        <h1>雷海<br />SeaThunder</h1>
+        <p class="lead">这里记录脉冲星研究、偏振数据分析、代码实验和科研路上的观察。保持简洁，把注意力留给星空、数据和问题本身。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="./templates/research.html">进入研究</a>
+          <a class="button" href="./templates/about_me.html">关于我</a>
+          <a class="button" href="https://github.com/seathunder421" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
     </section>
-    <h2 class="section-title">博客里有什么</h2>
-    <section class="cards">
-      <a class="mini-card" href="./templates/about_me.html"><h3>个人档案</h3><p>更完整地介绍我的背景、兴趣、联系方式与正在做的事情。</p></a>
-      <a class="mini-card" href="./templates/research.html"><h3>研究内容</h3><p>整理脉冲星偏振、辐射几何、RVM 拟合和多望远镜数据分析。</p></a>
-      <a class="mini-card" href="./templates/gallery.html"><h3>星空图库</h3><p>用图片保存科研之外的瞬间：天空、望远镜、旅途与灵感。</p></a>
+
+    <section class="content shell">
+      <div class="intro-strip">
+        <div>
+          <p class="section-kicker">Current Focus</p>
+          <h2>从偏振曲线到辐射几何。</h2>
+        </div>
+        <p class="intro-copy">我关注脉冲星辐射几何、RVM 拟合、多望远镜偏振观测和可复现的数据处理流程。这个博客是一个轻量入口：放研究页面、参数表、记录和图像，不做复杂装饰，只保留清晰的路径。</p>
+      </div>
+
+      <div class="index-list" aria-label="博客入口">
+        <a class="index-item" href="./templates/about_me.html">
+          <div><span>01</span><h3>关于我</h3><p>个人背景、联系方式，以及正在关注的问题。</p></div>
+        </a>
+        <a class="index-item" href="./templates/research.html">
+          <div><span>02</span><h3>研究内容</h3><p>脉冲星偏振、RVM 模型和观测数据分析。</p></div>
+        </a>
+        <a class="index-item" href="./templates/pulsar_parameters.html">
+          <div><span>03</span><h3>参数表</h3><p>整理样本、拟合结果和可查询的数据表。</p></div>
+        </a>
+        <a class="index-item" href="./templates/gallery.html">
+          <div><span>04</span><h3>图库</h3><p>保存星空、科研现场和生活中的图像片段。</p></div>
+        </a>
+      </div>
+
+      <footer>
+        <span>© 2026 雷海 SeaThunder</span>
+        <span>Built with GitHub Pages</span>
+      </footer>
     </section>
-    <footer>© 2026 雷海 SeaThunder · Built with GitHub Pages</footer>
   </main>
 </body>
 </html>
